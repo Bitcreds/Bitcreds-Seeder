@@ -12,7 +12,7 @@
 
 #define MIN_RETRY 1000
 
-#define REQUIRE_VERSION 70003
+#define REQUIRE_VERSION 70004
 
 static inline int GetRequireHeight(const bool testnet = fTestNet)
 {
@@ -119,8 +119,8 @@ public:
   }
   int GetBanTime() const {
     if (IsGood()) return 0;
-	//Below clientVersion < check should be the previous version. Set to current version for 70003 only to prevent forking.
-    if (clientVersion && clientVersion < 70003) { return 604800; }
+	//Below clientVersion < check should be the previous version. Set to current version for 70004 only to prevent forking.
+    if (clientVersion && clientVersion < 70004) { return 604800; }
     if (stat1M.reliability - stat1M.weight + 1.0 < 0.15 && stat1M.count > 32) { return 30*86400; }
     if (stat1W.reliability - stat1W.weight + 1.0 < 0.10 && stat1W.count > 16) { return 7*86400; }
     if (stat1D.reliability - stat1D.weight + 1.0 < 0.05 && stat1D.count > 8) { return 1*86400; }
