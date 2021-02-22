@@ -1,7 +1,7 @@
-credits-seeder
+bitcreds-seeder
 ==============
 
-Credits-seeder is a crawler for the Credits network, which exposes a list
+Bitcreds-seeder is a crawler for the Bitcreds network, which exposes a list
 of reliable nodes via a built-in DNS server.
 
 Features:
